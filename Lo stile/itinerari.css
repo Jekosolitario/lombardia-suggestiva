@@ -1,0 +1,146 @@
+:root {
+    /* Imposto il font-size base a 10px per semplificare l’uso di rem/em */
+    font-size: 62.5%;
+
+    --background: rgba(255, 245, 171, 0.6);
+
+    --titleH1: hsla(129, 100%, 11%, 0.7);
+    --titleH3: rgb(142, 16, 16);
+    --ombraBordi: 0px 0px 3px rgb(200, 200, 200);
+    --color-link: rgba(104, 95, 0, 0.9);
+}
+
+/* azzero i margini e il padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* lavoro sul body rendendolo responsive */
+body {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.7rem;
+
+    display: grid;
+    grid-template-columns: auto;
+
+    background-color: var(--background);
+    cursor: default;
+}
+
+/* header con titolo e menu */
+header#testaPagina {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    padding: 0.5em;
+}
+
+/* titolo */
+header#testaPagina>h1 {
+    text-align: center;
+    font-family: "Quintessential", serif;
+    font-weight: 600;
+    font-style: normal;
+
+    font-size: 1.8em;
+
+    box-shadow: var(--ombraBordi);
+    text-shadow: var(--ombraBordi);
+    color: var(--titleH1);
+}
+
+/* menu */
+header#testaPagina>nav#menu>ul,
+a.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    list-style: none;
+    text-decoration: none;
+
+    color: var(--color-link);
+    text-shadow: 1px 2px 3px var(--color-link);
+}
+
+/* corpo della pagina con le varie sezioni divise per categorie */
+main#itinerari {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    padding: 0.5em;
+}
+
+/* titolo h2 */
+main#itinerari>h2 {
+    font-family: "Oregano", cursive;
+    font-weight: bold;
+    font-style: italic;
+
+    color: var(--colorH);
+    text-shadow: 1px 2px 2px var(--titleH1);
+
+
+    text-align: center;
+}
+/* griglia di scorrimento per le varie sezioni  */
+main#itinerari>section.griglia-itinerari {
+    width: 100%;
+    max-height: 80%;
+
+    position: relative;
+    padding: 0.5em;
+
+    overflow: auto;
+
+    box-shadow: var(--ombraBordi);
+}
+
+/* stile comune per tutte le card di scorrimento */
+main#itinerari>section.griglia-itinerari>article.card-itinerario {
+    width: 90%;
+    padding: 0.5em;
+
+    box-shadow: var(--ombraBordi);
+    text-align: end;
+}
+
+/* immagini card */
+main#itinerari>section.griglia-itinerari>article.card-itinerario>img {
+    border-radius: 10%;
+    box-shadow: 2px 3px 3px var(--color-link);
+}
+
+/* sottotitoli delle card */
+main#itinerari>section.griglia-itinerari>article.card-itinerario>h3 {
+    color: var(--titleH3);
+
+    text-align: start;
+}
+
+/* paragrafi sezioni */
+main#itinerari>section.griglia-itinerari>article.card-itinerario>p {
+    text-align: start;
+}
+
+/* i link di ogni seione */
+main#itinerari>section.griglia-itinerari>article.card-itinerario>a {
+    align-self: flex-end;
+    color: var(--color-link);
+    text-shadow: 1px 2px 3px var(--color-link);
+   
+}

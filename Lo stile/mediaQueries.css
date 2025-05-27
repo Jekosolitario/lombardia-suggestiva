@@ -1,0 +1,118 @@
+:root {
+    /* Imposto il font-size base a 10px per semplificare l’uso di rem/em */
+    font-size: 62.5%;
+
+    /* Variabili per i colori principali del tema */
+    --backG: rgba(255, 253, 228, 0.8);
+    --colorH: rgba(0, 56, 8, 0.7);
+
+    --color-link: rgba(104, 95, 0, 0.9);
+    --hover: rgb(176, 55, 55);
+
+    --shadow1: 0px 0px 3px rgb(200, 200, 200);
+}
+
+/* MEDIA HOME  */
+/* PER VIEWPORT TRA 426PX E 768PX (TABLET) */
+@media (min-width: 426px) and (max-width: 768px) {
+    header#testaPagina>section#logoTitle {
+        /* centro il titolo h1 e il logo e li distanzio */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+
+/* PER VIEWPORT TRA 769PX E 1024(TABLET) */
+/* hover sui link del menu con transazione */
+@media (min-width: 769px) {
+    nav#menu>ul#listaMenu>li:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+    }
+
+    /* colore link */
+    nav#menu>ul#listaMenu>li>a:hover {
+        color: var(--hover);
+    }
+
+    /* link della prima sezione al centro dell'immagine hover con transazione */
+    main#corpoPagina>section#intro>section#fotoSezione1>a#sezione1:hover {
+        font-size: 1.1em;
+        padding: 1em;
+        color: var(--colorH);
+        box-shadow: 2px 2px 4px var(--colorH);
+        font-weight: bold;
+
+        transition: all 0.3s ease;
+    }
+
+    /* ingrandisco il titolo h1 dell'header*/
+    header#testaPagina>section#logoTitle>div#title>h1 {
+        font-size: 2em;
+    }
+
+    /* ingrandisco il titolo h2 del corpo principale */
+    main#corpoPagina>section#intro>h2 {
+        font-size: 1.7em;
+    }
+
+    /* riduco le dimensioni del contenitore dell'immagine */
+    main#corpoPagina>section#intro>section#fotoSezione1 {
+        width: 80%;
+    }
+
+    /* hover su instagram */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram:hover {
+        transform: scale(1.2);
+
+    }
+    /* hover su linkedin */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin:hover {
+        transform: scale(1.2);
+
+    }
+}
+
+
+
+
+
+/* PER VIEWPORT SUPERIORI A 1025PX */
+/* cambio la disposizione del contenitore contenuto della pagina */
+@media (min-width: 1025px) {
+
+    /* distanzio il logo dal titolo */
+    header#testaPagina>section#logoTitle {
+        justify-content: space-evenly;
+    }
+
+    main#corpoPagina>section#intro {
+        display: flex;
+        flex-direction: row;
+        /* cambia da column a row */
+        justify-content: space-around;
+        align-items: center;
+        /* o center se preferisci centrato */
+        gap: 2em;
+        /* spazio tra foto e testo */
+    }
+
+    main#corpoPagina>section#intro>section#fotoSezione1 {
+        width: 40%;
+        align-self: center;
+    }
+
+    main#corpoPagina>section#intro>p {
+        width: 55%;
+
+        border: 3px solid rgb(0 0 0);
+        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+        background-color: var(--hover);
+        color: var(--backG);
+
+        border-radius: 25%;
+        text-align: center;
+        padding: 1em;
+    }
+}
