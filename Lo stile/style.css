@@ -3,7 +3,7 @@
     font-size: 62.5%;
 
     /* Variabili per i colori principali del sito */
-    --background: rgba(255, 245, 171, 0.6);
+    --background: rgba(255, 249, 205, 0.6);
     --colorH: hsla(129, 100%, 11%, 0.702);
 
     --color-link: rgba(104, 95, 0, 0.9);
@@ -11,6 +11,7 @@
 
     --shadow1: 0px 0px 3px rgb(200, 200, 200);
 }
+
 /* azzero i margini e il padding */
 * {
     margin: 0;
@@ -212,15 +213,18 @@ footer#pie-pagina>section#social-policy>div#social>nav#collegamenti {
     align-items: center;
     gap: 1em;
 }
+
 /* dimensioni collegamenti  */
 footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands {
     font-size: 1.5em;
 }
-    /* instagram */
-    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram{
-        color: rgb(212, 41, 138);
-    }
-    /* linkedin */
-    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin{
-        color: rgb(11, 123, 209);
-    }
+
+/* instagram */
+footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram {
+    color: rgb(212, 41, 138);
+}
+
+/* linkedin */
+footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin {
+    color: rgb(11, 123, 209);
+}

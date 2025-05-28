@@ -1,0 +1,143 @@
+:root {
+    /* Imposto il font-size base a 10px per semplificare l’uso di rem/em */
+    font-size: 62.5%;
+
+    /* Variabili per i colori principali del tema */
+    --backG: rgba(255, 249, 205, 0.6);
+    --colorH: rgba(0, 56, 8, 0.7);
+
+    --color-link: rgba(104, 95, 0, 0.9);
+    --hover: rgb(176, 55, 55);
+
+    --shadow1: 0px 0px 3px rgb(200, 200, 200);
+}
+
+/* MEDIA ITINERARI */
+/* PER VIEWPORT TRA 426PX E 768PX (TABLET) */
+@media (min-width: 426px) {
+    header#testaPagina>section#logoTitle {
+        /* centro il titolo h1 e il logo e li distanzio */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    /* immagini card riduco le dimensioni */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>img {
+        width: 80%;
+    }
+
+    /* sottotitoli delle card */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>h3 {
+        text-align: center;
+    }
+
+    /* paragrafi sezioni */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>p {
+        text-align: center;
+    }
+}
+
+
+
+@media (min-width: 769px) {
+    header#testaPagina>section#logoTitle {
+        /* centro il titolo h1 e il logo e li distanzio */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    /* ingrandisco il titolo h1 */
+    header#testaPagina>section#logoTitle>h1 {
+        font-size: 2em;
+    }
+
+    /* hover sui link del menu con transizione */
+    header#testaPagina>nav#menu>ul>li:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+    }
+
+    /* colore link */
+    header#testaPagina>nav#menu>ul>li>a:hover {
+        color: var(--hover);
+    }
+
+
+    /* titolo h2 */
+    main#itinerari>h2 {
+        font-size: 1.7em;
+    }
+
+    /* immagini card */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>img {
+        width: 70%;
+    }
+
+    /* hover per i link di ogni sezione */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>a:hover {
+        color: var(--hover);
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+    }
+
+
+    /* ingrandisco logo instagram */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram {
+        font-size: 2em;
+    }
+
+    /* ingrandisco logo linkedin */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin {
+        font-size: 2em;
+    }
+
+    /* hover su instagram */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+    }
+
+    /* hover su linkedin */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* PER VIEWPORT SOPRA I 1025PX (LAPTOP) */
+@media (min-width: 1025px) {
+
+    /* ingrandisco il titolo h1 */
+    header#testaPagina>section#logoTitle>h1 {
+        font-size: 2.5em;
+    }
+
+    main#itinerari>section.griglia-itinerari {}
+
+    /* dispongo il flex direction in riga */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+
+    /* immagini card riduco le dimensioni */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>img {
+        width: 50%;
+    }
+
+    /* centro il collegamento della sezione */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>a {
+        align-self: center;
+        padding: 0.5em;
+    }
+}

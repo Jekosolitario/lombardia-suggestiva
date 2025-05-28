@@ -1,146 +1,236 @@
-:root {
-    /* Imposto il font-size base a 10px per semplificare l’uso di rem/em */
-    font-size: 62.5%;
+    :root {
+        /* Imposto il font-size base a 10px per semplificare l’uso di rem/em */
+        font-size: 62.5%;
 
-    --background: rgba(255, 245, 171, 0.6);
+        --background: rgba(255, 249, 205, 0.6);
 
-    --titleH1: hsla(129, 100%, 11%, 0.7);
-    --titleH3: rgb(142, 16, 16);
-    --ombraBordi: 0px 0px 3px rgb(200, 200, 200);
-    --color-link: rgba(104, 95, 0, 0.9);
-}
+        --titleH1: hsla(129, 100%, 11%, 0.7);
+        --titleH3: rgb(142, 16, 16);
+        --ombraBordi: 0px 0px 3px rgb(200, 200, 200);
+        --color-link: rgba(104, 95, 0, 0.9);
+    }
 
-/* azzero i margini e il padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    /* azzero i margini e il padding */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-/* lavoro sul body rendendolo responsive */
-body {
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-style: normal;
+    /* lavoro sul body rendendolo responsive */
+    body {
+        font-family: "PT Serif", serif;
+        font-weight: 400;
+        font-style: normal;
 
-    width: 100%;
-    min-height: 100vh;
-    font-size: 1.7rem;
+        width: 100%;
+        min-height: 100vh;
+        font-size: 1.7rem;
 
-    display: grid;
-    grid-template-columns: auto;
+        display: grid;
+        grid-template-columns: auto;
 
-    background-color: var(--background);
-    cursor: default;
-}
+        background-color: var(--background);
+        cursor: default;
+    }
 
-/* header con titolo e menu */
-header#testaPagina {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
+    /* header con titolo e menu */
+    header#testaPagina {
+        width: 100%;
 
-    padding: 0.5em;
-}
+        display: flex;
+        flex-flow: column wrap;
+        flex: 1 1 100%;
 
-/* titolo */
-header#testaPagina>h1 {
-    text-align: center;
-    font-family: "Quintessential", serif;
-    font-weight: 600;
-    font-style: normal;
+        padding: 0.5em;
+    }
 
-    font-size: 1.8em;
+    /* contenitore logo e titolo */
+    header#testaPagina>section#logoTitle {
+        width: 100%;
 
-    box-shadow: var(--ombraBordi);
-    text-shadow: var(--ombraBordi);
-    color: var(--titleH1);
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
 
-/* menu */
-header#testaPagina>nav#menu>ul,
-a.nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+        /* stile ombra molto fine per i bordi */
+        box-shadow: var(--ombraBordi);
 
-    list-style: none;
-    text-decoration: none;
+        padding: 0.5em;
+    }
 
-    color: var(--color-link);
-    text-shadow: 1px 2px 3px var(--color-link);
-}
+    /* arrotondo i bodi del logo */
+    header#testaPagina>section#logoTitle>div#box-logo>img#logo {
+        border-radius: 50%;
+    }
 
-/* corpo della pagina con le varie sezioni divise per categorie */
-main#itinerari {
-    width: 100%;
+    /* titolo */
+    header#testaPagina>section#logoTitle>h1 {
+        text-align: center;
+        font-family: "Quintessential", serif;
+        font-weight: 600;
+        font-style: normal;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
+        font-size: 1.8em;
 
-    padding: 0.5em;
-}
-
-/* titolo h2 */
-main#itinerari>h2 {
-    font-family: "Oregano", cursive;
-    font-weight: bold;
-    font-style: italic;
-
-    color: var(--colorH);
-    text-shadow: 1px 2px 2px var(--titleH1);
+        text-shadow: var(--ombraBordi);
+        color: var(--titleH1);
+    }
 
 
-    text-align: center;
-}
-/* griglia di scorrimento per le varie sezioni  */
-main#itinerari>section.griglia-itinerari {
-    width: 100%;
-    max-height: 80%;
+    /* MENU */
+    header#testaPagina>nav#menu {
+        width: 100%;
+        padding: 0.5em;
+    }
 
-    position: relative;
-    padding: 0.5em;
+    /* menu */
+    header#testaPagina>nav#menu>ul,
+    a.nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
 
-    overflow: auto;
+        list-style: none;
+        text-decoration: none;
 
-    box-shadow: var(--ombraBordi);
-}
+        color: var(--color-link);
+        text-shadow: 1px 2px 3px var(--color-link);
+    }
 
-/* stile comune per tutte le card di scorrimento */
-main#itinerari>section.griglia-itinerari>article.card-itinerario {
-    width: 90%;
-    padding: 0.5em;
+    /* corpo della pagina con le varie sezioni divise per categorie */
+    main#itinerari {
+        width: 100%;
 
-    box-shadow: var(--ombraBordi);
-    text-align: end;
-}
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1em;
 
-/* immagini card */
-main#itinerari>section.griglia-itinerari>article.card-itinerario>img {
-    border-radius: 10%;
-    box-shadow: 2px 3px 3px var(--color-link);
-}
+        padding: 0.5em;
+    }
 
-/* sottotitoli delle card */
-main#itinerari>section.griglia-itinerari>article.card-itinerario>h3 {
-    color: var(--titleH3);
+    /* titolo h2 */
+    main#itinerari>h2 {
+        font-family: "Oregano", cursive;
+        font-weight: bold;
+        font-style: italic;
 
-    text-align: start;
-}
+        color: var(--titleH1);
+        text-shadow: 1px 2px 2px var(--titleH1);
 
-/* paragrafi sezioni */
-main#itinerari>section.griglia-itinerari>article.card-itinerario>p {
-    text-align: start;
-}
 
-/* i link di ogni seione */
-main#itinerari>section.griglia-itinerari>article.card-itinerario>a {
-    align-self: flex-end;
-    color: var(--color-link);
-    text-shadow: 1px 2px 3px var(--color-link);
-   
-}
+        text-align: center;
+    }
+
+    /* griglia di scorrimento per le varie sezioni  */
+    main#itinerari>section.griglia-itinerari {
+        width: 100%;
+        max-height: 80%;
+
+        position: relative;
+        padding: 0.5em;
+
+
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        overflow: auto;
+
+        box-shadow: var(--ombraBordi);
+
+        gap: 1em;
+    }
+
+    /* stile comune per tutte le card di scorrimento */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario {
+        width: 90%;
+        padding: 0.5em;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        box-shadow: var(--ombraBordi);
+        text-align: end;
+    }
+
+    /* immagini card */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>img {
+        border-radius: 10%;
+        box-shadow: 2px 3px 3px var(--color-link);
+    }
+
+    /* sottotitoli delle card */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>h3 {
+        color: var(--titleH3);
+
+        text-align: start;
+        width: 100%;
+        padding: 0.5em;
+    }
+
+    /* paragrafi sezioni */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>p {
+        text-align: start;
+        width: 100%;
+    }
+
+    /* i link di ogni sezione */
+    main#itinerari>section.griglia-itinerari>article.card-itinerario>a {
+        align-self: flex-end;
+        color: var(--color-link);
+        text-shadow: 1px 2px 3px var(--color-link);
+
+    }
+
+
+    /* FOOTER */
+    footer#pie-pagina {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 100%;
+        align-items: center;
+
+        padding: 0.5em 0.5em 0 0.5em;
+
+        font-size: 0.7em;
+    }
+
+    /* centro gli elementi del footer  */
+    footer#pie-pagina>section#social-policy {
+        width: 100%;
+        text-align: center;
+
+        box-shadow: var(--ombraBordi);
+
+        padding: 0.5em;
+    }
+
+    /* dispongo i collegamenti ai social */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    /* dimensione icone link */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands {
+        font-size: 1.5em;
+    }
+
+    /* instagram */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram {
+        color: rgb(212, 41, 138);
+    }
+
+    /* linkedin */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin {
+        color: rgb(11, 123, 209);
+    }

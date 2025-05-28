@@ -6,88 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Zuhir Ichcho">
-    <meta name="description"
-        content="Scopri itinerari unici in Lombardia: luoghi abbandonati, borghi storici e sentieri nella natura. Ogni settimana nuove esplorazioni.">
+    <meta name="description" content="Scopri itinerari unici in Lombardia: luoghi abbandonati, borghi storici e sentieri nella natura. Ogni settimana nuove esplorazioni.">
     <meta name="robots" content="index, follow">
-    <meta name="keywords"
-        content="itinerari Lombardia, luoghi abbandonati, borghi medievali Lombardia, natura selvaggia, escursioni Lombardia, percorsi alternativi, viaggi insoliti, borghi fantasma Lombardia, esplorazioni fotografiche">
-    <!-- media queries -->
-    <link rel="stylesheet" href="Lo stile/itinerari.css">
-    <link rel="stylesheet" href="Lo stile/mediaQueries.css">
+    <meta name="keywords" content="itinerari Lombardia, luoghi abbandonati, borghi medievali Lombardia, natura selvaggia, escursioni Lombardia, percorsi alternativi, viaggi insoliti, borghi fantasma Lombardia, esplorazioni fotografiche">
 
-    <!-- font google -->
+    <!-- CSS principali -->
+    <link rel="stylesheet" href="Lo stile/itinerari.css">
+    <link rel="stylesheet" href="Lo stile/mediaQ_itinerari.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Uchen&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Uchen&display=swap" rel="stylesheet">
 
     <title>Itinerari in Lombardia | Luoghi Abbandonati, Natura e Borghi Segreti</title>
 </head>
 
 <body>
+    <!-- HEADER con logo e menu di navigazione -->
     <header id="testaPagina">
-        <!-- Titolo principale della pagina -->
-        <h1>Viaggiamo tra i segreti della Lombardia</h1>
+        <section id="logoTitle">
+            <div id="box-logo">
+                <!-- Logo del sito -->
+                <img src="Le immagini/Logo.webp" width="100px" alt="Logo raffigurante una montagna con un motociclista davanti e una piccola macchina fotografica" id="logo" title="Logo del sito dedicato alla scoperta della Lombardia">
+            </div>
+            <!-- Titolo principale -->
+            <h1>Viaggiamo tra i segreti della Lombardia</h1>
+        </section>
 
-        <!-- Menu di navigazione principale -->
+        <!-- Menu di navigazione -->
         <nav id="menu">
             <ul>
-                <!-- Link alla home -->
                 <li><a class="nav" href="index.html">HOME</a></li>
-
-                <!-- Link alla pagina contatti -->
                 <li><a class="nav" href="">CONTATTI</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- CONTENUTO PRINCIPALE: Sezione itinerari -->
     <main id="itinerari">
-        <!-- Sottotitolo per introdurre la sezione degli itinerari -->
         <h2>Esplora gli Itinerari</h2>
 
-        <!-- Sezione che contiene le card dei vari itinerari -->
         <section class="griglia-itinerari">
-
-            <!-- Card per luoghi abbandonati -->
+            <!-- Card: Luoghi abbandonati -->
             <article class="card-itinerario">
-                <!-- Immagine rappresentativa -->
-                <img src="Le immagini/manicomio.webp" width="100%"
-                    alt="Foto di un manicomio abbandonato, collegamento luoghi suggestivi"
-                    title="Foto manicomio abbandonato stile sephia" />
-                <!-- Titolo della categoria -->
+                <img src="Le immagini/manicomio.webp" width="100%" alt="Foto di un manicomio abbandonato, collegamento luoghi suggestivi" title="Ingresso di un manicomio abbandonato in stile liberty">
                 <h3>Luoghi suggestivi e abbandonati</h3>
-                <!-- Breve descrizione -->
                 <p>Esplora ex manicomi, borghi fantasma e resti dimenticati.</p>
-                <!-- Link alla pagina dettagliata -->
-                <a href="luoghi-abbandonati.html">Scopri di più</a>
+                <a target="_blank" href="luoghi-abbandonati.html">Scopri di più</a>
+            </article>
+
+            <!-- Card: Percorsi in natura -->
+            <article class="card-itinerario">
+                <img src="Le immagini/percorsi in natura.webp" width="100%" alt="Sentiero escursionistico in montagna immerso nel verde con panorama sul lago" title="Panorama primaverile con sentiero tra le montagne e vista su un lago alpino">
+                <h3>Tra sentieri e panorami mozzafiato</h3>
+                <p>Avventurati tra sentieri immersi nel verde e viste mozzafiato sulla Lombardia.</p>
+                <a target="_blank" href="percorsi-natura.html">Scopri di più</a>
             </article>
         </section>
     </main>
 
+    <!-- FOOTER con social e informazioni legali -->
     <footer id="pie-pagina">
         <section id="social-policy">
             <div id="social">
                 <nav aria-label="Collegamenti ai social web" id="collegamenti">
-                    <!-- instagram -->
-                    <a href="">
-                        <i class="fa-brands fa-square-instagram"></i></a>
-                    <!-- linkedin -->
-                    <a href="">
-                        <i class="fa-brands  fa-linkedin"></i></a>
+                    <!-- Link Instagram -->
+                    <a target="_blank" aria-label="Profilo instagram" href="">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                    <!-- Link LinkedIn -->
+                    <a target="_blank" aria-label="Profilo Linkedin" href="">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </nav>
             </div>
-            <p>Tutti i diritti riservati. Privacy & Policy.</p>
-        </section>
+            <p>Tutti i diritti riservati. <a target="_blank" href="privacy.html">Privacy & Policy</a></p>
 
+        </section>
     </footer>
 
+    <!-- Script JS -->
     <script src="doc.js"></script>
-    <!-- collegamento font google -->
     <script src="https://kit.fontawesome.com/aafe538849.js" crossorigin="anonymous"></script>
-    <!-- collegamento icone -->
-    <script src="https://kit.fontawesome.com/aafe538849.js" crossorigin="anonymous"></script>
-
 </body>
 
-</html>
+</html> 

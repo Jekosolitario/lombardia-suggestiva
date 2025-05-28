@@ -3,7 +3,7 @@
     font-size: 62.5%;
 
     /* Variabili per i colori principali del tema */
-    --backG: rgba(255, 253, 228, 0.8);
+    --backG: rgba(255, 249, 205, 0.6);
     --colorH: rgba(0, 56, 8, 0.7);
 
     --color-link: rgba(104, 95, 0, 0.9);
@@ -23,8 +23,8 @@
 }
 
 
-/* PER VIEWPORT TRA 769PX E 1024(TABLET) */
-/* hover sui link del menu con transazione */
+/* PER VIEWPORT SOPRA 769PX (TABLET) */
+/* hover sui link del menu con transizione */
 @media (min-width: 769px) {
     nav#menu>ul#listaMenu>li:hover {
         transform: scale(1.2);
@@ -36,7 +36,7 @@
         color: var(--hover);
     }
 
-    /* link della prima sezione al centro dell'immagine hover con transazione */
+    /* link della prima sezione al centro dell'immagine hover con transizione */
     main#corpoPagina>section#intro>section#fotoSezione1>a#sezione1:hover {
         font-size: 1.1em;
         padding: 1em;
@@ -62,15 +62,26 @@
         width: 80%;
     }
 
+    /* ingrandisco logo instagram */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram {
+        font-size: 2em;
+    }
+
+    /* ingrandisco logo linkedin */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin {
+        font-size: 2em;
+    }
+
     /* hover su instagram */
     footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram:hover {
         transform: scale(1.2);
-
+        transition: all 0.2s ease;
     }
+
     /* hover su linkedin */
     footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin:hover {
         transform: scale(1.2);
-
+        transition: all 0.2s ease;
     }
 }
 
@@ -109,7 +120,7 @@
         border: 3px solid rgb(0 0 0);
         box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
         background-color: var(--hover);
-        color: var(--backG);
+        color: rgb(200, 200, 200);
 
         border-radius: 25%;
         text-align: center;
