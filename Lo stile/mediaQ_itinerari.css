@@ -62,6 +62,9 @@
         color: var(--hover);
     }
 
+        main#itinerari > section.griglia-itinerari {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     /* titolo h2 */
     main#itinerari>h2 {
@@ -120,7 +123,14 @@
         font-size: 2.5em;
     }
 
-    main#itinerari>section.griglia-itinerari {}
+    main#itinerari > section.griglia-itinerari {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* evito che si allarghi troppo su schermi larghi. */
+    main#itinerari {
+        margin: 0 auto;
+    }
 
     /* dispongo il flex direction in riga */
     main#itinerari>section.griglia-itinerari>article.card-itinerario {

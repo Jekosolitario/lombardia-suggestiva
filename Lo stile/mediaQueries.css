@@ -36,8 +36,12 @@
         color: var(--hover);
     }
 
+    main#corpoPagina>section#intro>div#wrapper>section#fotoSezione1>img {
+        width: 80%;
+    }
+
     /* link della prima sezione al centro dell'immagine hover con transizione */
-    main#corpoPagina>section#intro>section#fotoSezione1>a#sezione1:hover {
+    main#corpoPagina>section#intro>div#wrapper>section#fotoSezione1>a#sezione1:hover {
         font-size: 1.1em;
         padding: 1em;
         color: var(--colorH);
@@ -53,12 +57,12 @@
     }
 
     /* ingrandisco il titolo h2 del corpo principale */
-    main#corpoPagina>section#intro>h2 {
+    main#corpoPagina>section#intro>div#wrapper>h2 {
         font-size: 1.7em;
     }
 
     /* riduco le dimensioni del contenitore dell'immagine */
-    main#corpoPagina>section#intro>section#fotoSezione1 {
+    main#corpoPagina>section#intro>div#wrapper>section#fotoSezione1 {
         width: 80%;
     }
 
@@ -99,31 +103,25 @@
     }
 
     main#corpoPagina>section#intro {
-        display: flex;
+        /* metto gli elementi in linea */
         flex-direction: row;
-        /* cambia da column a row */
-        justify-content: space-around;
-        align-items: center;
-        /* o center se preferisci centrato */
-        gap: 2em;
-        /* spazio tra foto e testo */
+        justify-content: center;
+
+        padding: 1em;
+    }
+
+    /* contenitore foto manicomio riduco dimensioni */
+    main#corpoPagina>section#intro>#wrapper {
+        width: 50%;
+    }
+
+    /* lo spazio che avanza ai paragrafi e schiarisco un po lo sfondo */
+    main#corpoPagina>section#intro>p {
+        width: 25%;
+        background-color: rgba(231, 193, 161, 0.472);
     }
 
     main#corpoPagina>section#intro>section#fotoSezione1 {
         width: 40%;
-        align-self: center;
-    }
-
-    main#corpoPagina>section#intro>p {
-        width: 55%;
-
-        border: 3px solid rgb(0 0 0);
-        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
-        background-color: var(--hover);
-        color: rgb(200, 200, 200);
-
-        border-radius: 25%;
-        text-align: center;
-        padding: 1em;
     }
 }

@@ -2,7 +2,7 @@
         /* Imposto il font-size base a 10px per semplificare l’uso di rem/em */
         font-size: 62.5%;
 
-        --background: rgba(255, 249, 205, 0.6);
+        --background: rgba(232, 228, 200, 0.6);
 
         --titleH1: hsla(129, 100%, 11%, 0.7);
         --titleH3: rgb(142, 16, 16);
@@ -16,6 +16,50 @@
         padding: 0;
         box-sizing: border-box;
     }
+
+
+
+
+
+/* Stile base del messaggio (toast) */
+.toast {
+  position: fixed; /* Posizione fissa rispetto alla finestra */
+  left: 50%; 
+  bottom: 50%;
+  transform: translateX(-50%); /* Sposta il box al centro esatto */
+
+  background-color: rgba(55, 55, 55, 0.9); 
+  color: white; /* Testo bianco */
+  padding: 1rem 2rem; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px black; 
+  z-index: 999; 
+  font-size: 1.4rem; /* Dimensione del testo */
+
+  opacity: 0; /* Di default è invisibile */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Animazioni fluide */
+}
+
+/* Classe che viene aggiunta per mostrare il messaggio */
+.toast.show {
+  opacity: 1; /* Rende visibile */
+  transform: translateX(-50%) translateY(0); /* Nessun ulteriore spostamento verticale */
+}
+
+/* Classe per nascondere completamente il messaggio (display none) */
+.toast.hidden {
+  display: none; /* Totalmente invisibile e rimosso dal layout */
+}
+
+
+
+
+
+
+
+
+
+
 
     /* lavoro sul body rendendolo responsive */
     body {
@@ -33,6 +77,21 @@
         background-color: var(--background);
         cursor: default;
     }
+
+
+
+
+    /* focus-visible per accessibilità da tastiera ai link */
+    a:focus-visible {
+        outline: 2px solid var(--titleH3);
+        border-radius: 4px;
+    }
+
+
+
+
+
+
 
     /* header con titolo e menu */
     header#testaPagina {

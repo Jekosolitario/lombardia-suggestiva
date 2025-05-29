@@ -24,6 +24,8 @@
 
     <title>Lombardia Segreta | Scopriamo i Luoghi Nascosti, Itinerari e Natura</title>
 </head>
+<!-- Messaggio in sovrimpressione -->
+<div id="toast-avviso" class="toast hidden">Sezione non ancora disponibile. Ancora un po di pazienza e ci siamo!</div>
 
 <body> <!-- body contenitore grid -->
 
@@ -51,10 +53,12 @@
         </ul>
     </nav>
 
-    <main id="corpoPagina">
+    <!-- role="main" per migliorare l'accessibilità screen reader -->
+    <main role="main" id="corpoPagina">
         <!-- Associo l’elemento a un altro che fa da etichetta, in questo caso titoloIntro per migliorare l’accessibilità del sito -->
         <section aria-labelledby="titoloIntro" id="intro"><!-- una breve introduzione al sito -->
-            <h2 id="titoloIntro">Esploriamo la Lombardia più nascosta</h2>
+
+
             <p>
                 Benvenuto sugli <strong>Scorci Lombardi</strong>, il tuo punto di partenza per un viaggio tra luoghi
                 dimenticati, borghi sospesi nel tempo, sentieri nella natura incontaminata e storie che in pochi
@@ -62,18 +66,24 @@
                 Ogni settimana, esploro e documento un nuovo angolo nascosto della Lombardia, armato di fotocamera,
                 action cam e tanta curiosità.
             </p>
+
+            <div id="wrapper">
+                <h2 id="titoloIntro">Esploriamo la Lombardia più nascosta</h2>
+                <section id="fotoSezione1"><!-- collegamento alle sezioni principali del sito -->
+                    <!-- loading="lazy" per le immagini non visibili subito -->
+                    <img loading="lazy" src="Le immagini/manicomio.webp" width="100%"
+                        alt="Foto di un manicomio abbandonato, collegamento alla sezione luoghi suggestivi"
+                        title="Foto manicomio abbandonato stile sephia">
+                    <a role="button" href="itinerari.html" id="sezione1">Scopri di più</a>
+                </section>
+            </div>
+
             <p>
                 Se ami l'avventura, le leggende locali, i panorami mozzafiato e i percorsi alternativi - questo è il
                 posto giusto per te.
                 Preparati a scoprire una Lombardia che non troverai sulle solite guide turistiche.
             </p>
 
-            <section id="fotoSezione1"><!-- collegamento alle sezioni principali del sito -->
-                <img src="Le immagini/manicomio.webp" width="100%"
-                    alt="Foto di un manicomio abbandonato, collegamento alla sezione luoghi suggestivi"
-                    title="Foto manicomio abbandonato stile sephia">
-                <a href="" id="sezione1">Luoghi suggestivi e abbandonati</a>
-            </section>
         </section>
 
     </main>
@@ -84,10 +94,10 @@
             <div id="social">
                 <nav aria-label="Collegamenti ai social web" id="collegamenti">
                     <!-- instagram -->
-                    <a target="_blank" href="">
+                    <a target="_blank" href="#" rel="noopener noreferrer">
                         <i class="fa-brands fa-square-instagram"></i></a>
                     <!-- linkedin -->
-                    <a target="_blank" href="">
+                    <a target="_blank" href="#" rel="noopener noreferrer">
                         <i class="fa-brands  fa-linkedin"></i></a>
                 </nav>
             </div>
