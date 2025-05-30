@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Zuhir Ichcho">
+    <meta name="description"
+        content="Contatta Zuhir Ichcho, web designer e appassionato esploratore. Per collaborazioni, proposte di lavoro o semplici domande, scrivimi dal modulo contatti.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords"
+        content="contatti, portfolio web, Zuhir Ichcho, Lombardia Suggestiva, collaborazioni, web designer, front-end developer, proposte lavoro, modulo contatto">
+    <!-- CSS principali -->
+    <link rel="stylesheet" href="Lo stile/contatti.css">
+    <link rel="stylesheet" href="Lo stile/mediaQ_contatti.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Uchen&display=swap"
+        rel="stylesheet">
+
+    <title>Contatti | Lombardia Suggestiva - Portfolio Zuhir Ichcho</title>
+</head>
+
+<!-- Messaggio in sovrimpressione -->
+<div id="toast-avviso" class="toast hidden">Sezione non ancora disponibile. Ancora un po di pazienza e ci siamo!</div>
+
+
+<body>
+    <!-- HEADER con logo e menu di navigazione -->
+    <header id="testaPagina">
+        <section id="logoTitle">
+            <div id="box-logo">
+                <!-- Logo del sito -->
+                <img src="Le immagini/Logo.webp" width="100px"
+                    alt="Logo raffigurante una montagna con un motociclista davanti e una piccola macchina fotografica"
+                    id="logo" title="Logo del sito dedicato alla scoperta della Lombardia">
+            </div>
+            <!-- Titolo principale -->
+            <h1>Contatti</h1>
+        </section>
+
+        <!-- Menu di navigazione -->
+        <nav id="menu">
+            <ul>
+                <li><a class="nav" href="index.html">HOME</a></li>
+                <li><a class="nav" href="itinerari.html">ITINERARI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <main role="main" id="corpoPagina">
+        <section id="paragrafoIntroduttivo">
+            <p>
+            <p>
+                Ciao! Mi chiamo Zuir, ho 29 anni e sto studiando per diventare uno sviluppatore web.
+                Amo esplorare la natura, scattare foto e trasformare le mie passioni in contenuti digitali.
+                Non sono (ancora) un esperto, ma metto entusiasmo e voglia di crescere in ogni progetto che affronto.
+                Se vuoi collaborare con me, propormi un lavoro o semplicemente fare due chiacchiere su coding e
+                avventure lombarde, scrivimi! <br>
+                <i>"Il mio sogno è lavorare nel mondo della programmazione e costruire una carriera solida partendo da
+                    esperienze concrete."</i>
+            </p>
+            </p>
+        </section>
+
+        <section id="modulo">
+            <form id="form" action="contatti.html" method="get" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Contattami</legend>
+                    <label for="name">Nome* </label><!-- etichetta nome -->
+                    <input type="text" id="name" name="name" required placeholder="Mario"> <!-- input nome -->
+
+                    <label for="email">E-mail* </label><!-- etichetta email -->
+                    <input type="email" id="email" name="email" required
+                        placeholder="mariorossi@gmail.com"><!-- imèut email -->
+
+                    <label for="oggetto">Oggetto </label><!-- etichetta oggetto -->
+                    <input type="text" id="oggetto" name="oggetto"><!-- input oggetto -->
+
+                    <label for="mess">Messaggio </label> <!-- etichetta messaggio -->
+                    <textarea name="mess" id="mess"></textarea>
+
+                </fieldset>
+
+                <!-- invio del modulo -->
+                <button type="submit">Invia</button>
+            </form>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+    <footer id="pie-pagina">
+        <section id="social-policy">
+            <div id="social">
+                <nav aria-label="Collegamenti ai social web" id="collegamenti">
+                    <!-- instagram -->
+                    <a href="#"> <!-- rel="noopener noreferrer"  -->
+                        <i class="fa-brands fa-square-instagram"></i></a>
+                    <!-- linkedin -->
+                    <a href="#"> <!-- rel="noopener noreferrer"  -->
+                        <i class="fa-brands  fa-linkedin"></i></a>
+                </nav>
+            </div>
+            <p>Tutti i diritti riservati. <a href="#">Privacy & Policy</a><!-- rel="noopener noreferrer"  --></p>
+
+        </section>
+
+    </footer>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="doc.js"></script>
+<!-- collegamento icone -->
+<script src="https://kit.fontawesome.com/aafe538849.js" crossorigin="anonymous"></script>
+
+</html>
