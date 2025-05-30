@@ -1,0 +1,343 @@
+:root {
+    /* Imposto il font-size base a 10px per semplificare l’uso di rem/em */
+    font-size: 62.5%;
+
+    /* Variabili per i colori principali del sito */
+    --background: rgba(232, 228, 200, 0.6);
+    --colorH: hsla(129, 100%, 11%, 0.702);
+
+    --color-link: rgba(104, 95, 0, 0.9);
+    --color-link2: rgb(114, 8, 8);
+
+    --shadow1: 0px 0px 3px rgb(200, 200, 200);
+}
+
+/* azzero i margini e il padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stile base del messaggio (toast) */
+.toast {
+    position: fixed;
+    /* Posizione fissa rispetto alla finestra */
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    /* Sposta il box al centro esatto */
+
+    background-color: rgba(55, 55, 55, 0.9);
+    color: white;
+    /* Testo bianco */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    z-index: 999;
+    font-size: 1.4rem;
+    /* Dimensione del testo */
+
+    opacity: 0;
+    /* Di default è invisibile */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Animazioni fluide */
+}
+
+/* Classe che viene aggiunta per mostrare il messaggio */
+.toast.show {
+    opacity: 1;
+    /* Rende visibile */
+    transform: translateX(-50%) translateY(0);
+    /* Nessun ulteriore spostamento verticale */
+}
+
+/* Classe per nascondere completamente il messaggio (display none) */
+.toast.hidden {
+    display: none;
+    /* Totalmente invisibile e rimosso dal layout */
+}
+
+
+/* lavoro sul body rendendolo responsive */
+body {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.7rem;
+
+    display: grid;
+    grid-template-columns: auto;
+
+    background-color: var(--background);
+    cursor: default;
+}
+
+/* focus-visible per accessibilità da tastiera ai link */
+a:focus-visible {
+    outline: 2px solid var();
+    border-radius: 4px;
+}
+
+/* rendiamo gli elementi di body dei flex container responsive */
+header#testaPagina {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 100%;
+
+    padding: 0.5em;
+}
+
+/* contenitore logo e titolo */
+header#testaPagina>section#logoTitle {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    /* stile ombra molto fine per i bordi */
+    box-shadow: var(--shadow1);
+
+    padding: 0.5em;
+}
+
+/* arrotondo i bodi del logo */
+header#testaPagina>section#logoTitle>div#box-logo>img#logo {
+    border-radius: 50%;
+}
+
+/* inserisco il font google per il titolo */
+header#testaPagina>section#logoTitle>h1 {
+    font-family: "Quintessential", serif;
+    font-weight: 600;
+    font-style: normal;
+
+    font-size: 1.8em;
+
+    color: var(--colorH);
+    text-align: start;
+    text-shadow: var(--shadow1);
+}
+
+/* MENU */
+header#testaPagina>nav#menu {
+    width: 100%;
+    padding: 0.5em;
+}
+
+/* metto la lista menu in linea */
+header#testaPagina>nav#menu>ul {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* personalizzo link menu */
+header#testaPagina>nav#menu>ul>li>a {
+    text-decoration: none;
+
+    color: var(--color-link);
+    text-shadow: 1px 2px 3px var(--color-link);
+}
+
+
+
+
+/* Personalizzo il main dandogli uno stile coerente */
+main#corpoPagina {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    flex: 1 1 100%;
+
+    padding: 0.5em;
+}
+
+/* griglia di scorrimento  */
+main#corpoPagina>section#wrapper {
+    width: 100%;
+    max-height: 80%;
+
+    position: relative;
+    padding: 0.5em;
+
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    overflow: auto;
+
+    box-shadow: var(--shadow1);
+
+    gap: 1em;
+}
+
+/* stile comune sezioni del main */
+main#corpoPagina>section#wrapper>section.box {
+    width: 90%;
+    padding: 0.5em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    box-shadow: var(--shadow1);
+    text-align: center;
+}
+
+/* paragrafo introduttivo */
+main#corpoPagina>section#wrapper>section#paragrafoIntroduttivo {
+    box-shadow: 2px 3px 3px rgb(0 0 0);
+    background-color: rgba(212, 167, 130, 0.472);
+    color: rgb(0 0 0);
+
+    border-radius: 25%;
+    padding: 1em;
+}
+
+/* rimuovo ombra del modulo */
+main#corpoPagina>section#wrapper>section#modulo {
+    box-shadow: none;
+}
+
+/* sezione del form */
+main#corpoPagina>section#wrapper>section#modulo>form#form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(193, 208, 220, 0.7);
+    box-shadow: 2px 3px 3px rgb(0 0 0);
+
+    border-radius: 20%;
+    padding: 0.5em;
+    gap: 0.5em;
+}
+
+/* fieldset del form */
+main#corpoPagina>section#wrapper>section#modulo>form#form>fieldset {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0.5em;
+    border-radius: 20%;
+    gap: 0.5em;
+}
+
+/* stile degli input */
+.input {
+    padding: 0.3em;
+    border: none;
+    background-color: var(--background);
+}
+
+/* titolo del fieldset */
+main#corpoPagina>section#wrapper>section#modulo>form#form>fieldset>legend {
+    font-family: "Oregano", cursive;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+
+    color: var(--colorH);
+    text-shadow: 1px 2px 2px var(--colorH);
+    padding: 0.5em;
+}
+
+/* area del messaggio */
+main#corpoPagina>section#wrapper>section#modulo>form#form>fieldset>textarea#mess {
+    resize: none;
+    padding: 0.3em;
+    border: none;
+    background-color: var(--background);
+}
+
+/* pulsante submit */
+main#corpoPagina>section#wrapper>section#modulo>form#form>button#invia {
+    padding: 0.5em;
+    border-radius: 50%;
+    border: none;
+
+    background-color: var(--color-link2);
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 3px 2px rgb(0 0 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer#pie-pagina {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    font-size: 0.8em;
+
+    padding: 0.5em 0.5em 0 0.5em;
+}
+
+/* sezione social e diritti del footer */
+footer#pie-pagina>section#social-policy {
+    width: 100%;
+    text-align: center;
+
+    box-shadow: var(--shadow1);
+
+    padding: 0.5em;
+}
+
+/* dispongo i collegamenti ai social */
+footer#pie-pagina>section#social-policy>div#social>nav#collegamenti {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+/* dimensioni collegamenti  */
+footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands {
+    font-size: 1.5em;
+}
+
+/* instagram */
+footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram {
+    color: rgb(212, 41, 138);
+}
+
+/* linkedin */
+footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin {
+    color: rgb(11, 123, 209);
+}

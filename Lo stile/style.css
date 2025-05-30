@@ -256,6 +256,13 @@ main#corpoPagina>section#intro>div#wrapper>section#fotoSezione1>a#sezione1 {
     overflow-wrap: break-word;
 }
 
+
+
+
+
+
+
+
 /* FOOTER */
 footer#pie-pagina {
     width: 100%;
@@ -269,7 +276,7 @@ footer#pie-pagina {
 }
 
 /* sezione social e diritti del footer */
-footer#pie-pagina>section#social {
+footer#pie-pagina>section#social-policy {
     width: 100%;
     text-align: center;
 

@@ -56,43 +56,48 @@
 
 
     <main role="main" id="corpoPagina">
-        <section id="paragrafoIntroduttivo">
-            <p>
-            <p>
-                Ciao! Mi chiamo Zuir, ho 29 anni e sto studiando per diventare uno sviluppatore web.
-                Amo esplorare la natura, scattare foto e trasformare le mie passioni in contenuti digitali.
-                Non sono (ancora) un esperto, ma metto entusiasmo e voglia di crescere in ogni progetto che affronto.
-                Se vuoi collaborare con me, propormi un lavoro o semplicemente fare due chiacchiere su coding e
-                avventure lombarde, scrivimi! <br>
-                <i>"Il mio sogno è lavorare nel mondo della programmazione e costruire una carriera solida partendo da
-                    esperienze concrete."</i>
-            </p>
-            </p>
+        <section id="wrapper">
+            <section class="box" id="paragrafoIntroduttivo">
+                <p>
+                <p>
+                    Ciao! Mi chiamo Zuir, sto studiando per diventare uno sviluppatore web.
+                    Amo esplorare la natura, scattare foto e trasformare le mie passioni in contenuti digitali.
+                    Non sono (ancora) un esperto, ma metto entusiasmo e voglia di crescere in ogni progetto che
+                    affronto.
+                    Se vuoi collaborare con me, propormi un lavoro o semplicemente fare due chiacchiere su coding e
+                    avventure lombarde, scrivimi! <br>
+                    <i>"Il mio sogno è lavorare nel mondo della programmazione e costruire una carriera solida partendo
+                        da
+                        esperienze concrete."</i>
+                </p>
+                </p>
+            </section>
+
+            <section class="box" id="modulo">
+                <form id="form" action="contatti.html" method="get" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Contattami</legend>
+                        <label for="name">Nome* </label><!-- etichetta nome -->
+                        <input class="input" type="text" id="name" name="name" required placeholder="Mario"> <!-- input nome -->
+
+                        <label for="email">E-mail* </label><!-- etichetta email -->
+                        <input class="input" type="email" id="email" name="email" required
+                            placeholder="mariorossi@gmail.com"><!-- imèut email -->
+
+                        <label for="oggetto">Oggetto </label><!-- etichetta oggetto -->
+                        <textarea cols="30" rows="1" name="oggetto" id="mess"></textarea>
+
+                        <label for="mess">Messaggio </label> <!-- etichetta messaggio -->
+                        <textarea cols="30" rows="15" name="mess" id="mess"></textarea>
+
+                    </fieldset>
+
+                    <!-- invio del modulo -->
+                    <button id="invia" type="submit">Invia</button>
+                </form>
+            </section>
         </section>
 
-        <section id="modulo">
-            <form id="form" action="contatti.html" method="get" enctype="multipart/form-data">
-                <fieldset>
-                    <legend>Contattami</legend>
-                    <label for="name">Nome* </label><!-- etichetta nome -->
-                    <input type="text" id="name" name="name" required placeholder="Mario"> <!-- input nome -->
-
-                    <label for="email">E-mail* </label><!-- etichetta email -->
-                    <input type="email" id="email" name="email" required
-                        placeholder="mariorossi@gmail.com"><!-- imèut email -->
-
-                    <label for="oggetto">Oggetto </label><!-- etichetta oggetto -->
-                    <input type="text" id="oggetto" name="oggetto"><!-- input oggetto -->
-
-                    <label for="mess">Messaggio </label> <!-- etichetta messaggio -->
-                    <textarea name="mess" id="mess"></textarea>
-
-                </fieldset>
-
-                <!-- invio del modulo -->
-                <button type="submit">Invia</button>
-            </form>
-        </section>
     </main>
 
 
