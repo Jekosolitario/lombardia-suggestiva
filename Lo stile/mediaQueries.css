@@ -118,7 +118,6 @@
     /* lo spazio che avanza ai paragrafi e schiarisco un po lo sfondo */
     main#corpoPagina>section#intro>p {
         width: 25%;
-        background-color: rgba(231, 193, 161, 0.472);
     }
 
     main#corpoPagina>section#intro>section#fotoSezione1 {

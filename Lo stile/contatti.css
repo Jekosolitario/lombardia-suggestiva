@@ -199,10 +199,10 @@ main#corpoPagina>section#wrapper>section.box {
 /* paragrafo introduttivo */
 main#corpoPagina>section#wrapper>section#paragrafoIntroduttivo {
     box-shadow: 2px 3px 3px rgb(0 0 0);
-    background-color: rgba(212, 167, 130, 0.472);
+    background-color: rgba(212, 167, 130, 0.8);
     color: rgb(0 0 0);
 
-    border-radius: 25%;
+    border-radius: 12px;
     padding: 1em;
 }
 
@@ -223,7 +223,7 @@ main#corpoPagina>section#wrapper>section#modulo>form#form {
     background-color: rgba(193, 208, 220, 0.7);
     box-shadow: 2px 3px 3px rgb(0 0 0);
 
-    border-radius: 20%;
+    border-radius: 12px;
     padding: 0.5em;
     gap: 0.5em;
 }
@@ -261,17 +261,26 @@ main#corpoPagina>section#wrapper>section#modulo>form#form>fieldset>legend {
 }
 
 /* area del messaggio */
-main#corpoPagina>section#wrapper>section#modulo>form#form>fieldset>textarea#mess {
+main#corpoPagina>section#wrapper>section#modulo>form#form>fieldset>textarea {
     resize: none;
     padding: 0.3em;
     border: none;
     background-color: var(--background);
 }
 
+/* focus quando seleziono gli input e area di testo */
+.input:focus,
+textarea:focus {
+  outline: 2px solid var(--colorH);
+  background-color: white;
+}
+
+
 /* pulsante submit */
 main#corpoPagina>section#wrapper>section#modulo>form#form>button#invia {
-    padding: 0.5em;
-    border-radius: 50%;
+    border-radius: 10px;
+    padding: 0.5em 2em;
+
     border: none;
 
     background-color: var(--color-link2);

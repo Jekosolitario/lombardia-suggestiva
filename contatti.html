@@ -25,11 +25,17 @@
     <title>Contatti | Lombardia Suggestiva - Portfolio Zuhir Ichcho</title>
 </head>
 
-<!-- Messaggio in sovrimpressione -->
-<div id="toast-avviso" class="toast hidden">Sezione non ancora disponibile. Ancora un po di pazienza e ci siamo!</div>
+
 
 
 <body>
+
+    <!-- Messaggio in sovrimpressione -->
+    <div id="toast-avviso" class="toast hidden">Sezione non ancora disponibile. Ancora un po di pazienza e ci siamo!
+    </div>
+
+
+
     <!-- HEADER con logo e menu di navigazione -->
     <header id="testaPagina">
         <section id="logoTitle">
@@ -58,7 +64,7 @@
     <main role="main" id="corpoPagina">
         <section id="wrapper">
             <section class="box" id="paragrafoIntroduttivo">
-                <p>
+
                 <p>
                     Ciao! Mi chiamo Zuir, sto studiando per diventare uno sviluppatore web.
                     Amo esplorare la natura, scattare foto e trasformare le mie passioni in contenuti digitali.
@@ -70,22 +76,21 @@
                         da
                         esperienze concrete."</i>
                 </p>
-                </p>
+
             </section>
 
             <section class="box" id="modulo">
-                <form id="form" action="contatti.html" method="get" enctype="multipart/form-data">
+                <form id="form" action="#" method="post" enctype="multipart/form-data">
                     <fieldset>
                         <legend>Contattami</legend>
                         <label for="name">Nome* </label><!-- etichetta nome -->
-                        <input class="input" type="text" id="name" name="name" required placeholder="Mario"> <!-- input nome -->
+                        <input class="input" type="text" id="name" name="name" required> <!-- input nome -->
 
                         <label for="email">E-mail* </label><!-- etichetta email -->
-                        <input class="input" type="email" id="email" name="email" required
-                            placeholder="mariorossi@gmail.com"><!-- imèut email -->
+                        <input class="input" type="email" id="email" name="email" required><!-- imèut email -->
 
                         <label for="oggetto">Oggetto </label><!-- etichetta oggetto -->
-                        <textarea cols="30" rows="1" name="oggetto" id="mess"></textarea>
+                        <textarea cols="30" rows="1" name="oggetto" id="oggetto"></textarea>
 
                         <label for="mess">Messaggio </label> <!-- etichetta messaggio -->
                         <textarea cols="30" rows="15" name="mess" id="mess"></textarea>
@@ -112,10 +117,10 @@
             <div id="social">
                 <nav aria-label="Collegamenti ai social web" id="collegamenti">
                     <!-- instagram -->
-                    <a href="#"> <!-- rel="noopener noreferrer"  -->
+                    <a href="#" aria-label="Instagram"> <!-- rel="noopener noreferrer"  -->
                         <i class="fa-brands fa-square-instagram"></i></a>
                     <!-- linkedin -->
-                    <a href="#"> <!-- rel="noopener noreferrer"  -->
+                    <a href="#" aria-label="LinkedIn"> <!-- rel="noopener noreferrer"  -->
                         <i class="fa-brands  fa-linkedin"></i></a>
                 </nav>
             </div>

@@ -219,7 +219,7 @@
 
     /* immagini card */
     main#itinerari>section.griglia-itinerari>article.card-itinerario>img {
-        border-radius: 10%;
+        border-radius: 15px;
         box-shadow: 2px 3px 3px var(--color-link);
     }
 

@@ -1,0 +1,99 @@
+:root {
+    /* Imposto il font-size base a 10px per semplificare l’uso di rem/em */
+    font-size: 62.5%;
+
+    /* Variabili per i colori principali del sito */
+    --background: rgba(232, 228, 200, 0.6);
+    --colorH: hsla(129, 100%, 11%, 0.702);
+
+    --color-link: rgba(104, 95, 0, 0.9);
+    --color-link2: rgb(176, 55, 55);
+
+    --shadow1: 0px 0px 3px rgb(200, 200, 200);
+}
+
+/* MEDIA CONTATTI  */
+
+/* PER VIEWPORT TRA 426PX E 768PX (TABLET) */
+@media (min-width: 426px) and (max-width: 768px) {
+    header#testaPagina>section#logoTitle {
+        /* centro il titolo h1 e il logo e li distanzio */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+
+
+/* PER VIEWPORT SOPRA 769PX (TABLET e LAPTOP) */
+/* hover sui link del menu con transizione */
+@media (min-width: 769px) {
+    header#testaPagina>nav#menu>ul>li:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+    }
+
+    /* colore link */
+    header#testaPagina>nav#menu>ul>li>a:hover {
+        color: var(--color-link2);
+    }
+
+    /* ingrandisco il titolo h1 dell'header*/
+    header#testaPagina>section#logoTitle>div#title>h1 {
+        font-size: 2em;
+    }
+
+    /* ingrandisco il titolo h1 dell'header*/
+    header#testaPagina>section#logoTitle>h1 {
+        font-size: 2em;
+    }
+
+
+
+    /* riduco le dimensioni del contenitore del form e paragrafo */
+    main#corpoPagina>section#wrapper {
+        width: 70%;
+        align-self: center;
+    }
+
+    /* hover sul pulsante submit */
+    main#corpoPagina>section#wrapper>section#modulo>form#form>button#invia:hover {
+        background-color: var(--colorH);
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    /* ingrandisco logo linkedin */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin {
+        font-size: 2em;
+    }
+
+    /* hover su instagram */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-square-instagram:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+    }
+
+    /* hover su linkedin */
+    footer#pie-pagina>section#social-policy>div#social>nav#collegamenti>a>i.fa-brands.fa-linkedin:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+    }
+
+
+}
+
+
+
+
+
+
+/* PER VIEWPORT SUPERIORI A 1025PX */
+/* cambio la disposizione del contenitore contenuto della pagina */
+@media (min-width: 1025px) {
+
+    /* distanzio il logo dal titolo */
+    header#testaPagina>section#logoTitle {
+        justify-content: space-evenly;
+    }
+}

@@ -183,10 +183,10 @@ main#corpoPagina>section#intro {
 
 main#corpoPagina>section#intro>p {
     box-shadow: 2px 3px 3px rgb(0 0 0);
-    background-color: rgba(212, 167, 130, 0.472);
+    background-color: rgba(212, 167, 130, 0.8);
     color: rgb(0 0 0);
 
-    border-radius: 25%;
+    border-radius: 12px;
     text-align: center;
     padding: 1em;
 }
@@ -223,7 +223,7 @@ main#corpoPagina>section#intro>div#wrapper>section#fotoSezione1 {
 
 /* immagine sfondo */
 main#corpoPagina>section#intro>div#wrapper>section#fotoSezione1>img {
-    border-radius: 20%;
+    border-radius: 15px;
     box-shadow: 2px 3px 5px var(--color-link);
 }
 
