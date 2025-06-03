@@ -20,35 +20,50 @@
 }
 
 
+/* link attivo in grassetto, indico all'utente in qauale pagina  si trova */
+nav a.active {
+    font-weight: bold;
+}
+
+
 
 /* Stile base del messaggio (toast) */
 .toast {
-  position: fixed; /* Posizione fissa rispetto alla finestra */
-  left: 50%; 
-  bottom: 50%;
-  transform: translateX(-50%); /* Sposta il box al centro esatto */
+    position: fixed;
+    /* Posizione fissa rispetto alla finestra */
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    /* Sposta il box al centro esatto */
 
-  background-color: rgba(55, 55, 55, 0.9); 
-  color: white; /* Testo bianco */
-  padding: 1rem 2rem; 
-  border-radius: 10px; 
-  box-shadow: 0 0 10px black; 
-  z-index: 999; 
-  font-size: 1.4rem; /* Dimensione del testo */
+    background-color: rgba(55, 55, 55, 0.9);
+    color: white;
+    /* Testo bianco */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    z-index: 999;
+    font-size: 1.4rem;
+    /* Dimensione del testo */
 
-  opacity: 0; /* Di default è invisibile */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Animazioni fluide */
+    opacity: 0;
+    /* Di default è invisibile */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Animazioni fluide */
 }
 
 /* Classe che viene aggiunta per mostrare il messaggio */
 .toast.show {
-  opacity: 1; /* Rende visibile */
-  transform: translateX(-50%) translateY(0); /* Nessun ulteriore spostamento verticale */
+    opacity: 1;
+    /* Rende visibile */
+    transform: translateX(-50%) translateY(0);
+    /* Nessun ulteriore spostamento verticale */
 }
 
 /* Classe per nascondere completamente il messaggio (display none) */
 .toast.hidden {
-  display: none; /* Totalmente invisibile e rimosso dal layout */
+    display: none;
+    /* Totalmente invisibile e rimosso dal layout */
 }
 
 
@@ -68,7 +83,8 @@ body {
     font-size: 1.7rem;
 
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
     background-color: var(--background);
     cursor: default;
@@ -78,8 +94,8 @@ body {
 
 /* focus-visible per accessibilità da tastiera ai link */
 a:focus-visible {
-  outline: 2px solid var(--color-link2);
-  border-radius: 4px;
+    outline: 2px solid var(--color-link2);
+    border-radius: 4px;
 }
 
 
@@ -239,7 +255,7 @@ main#corpoPagina>section#intro>div#wrapper>section#fotoSezione1>a#sezione1 {
 
     color: rgb(255, 255, 255);
     border: 3px solid hsla(0, 0%, 100%, 0.3);
-    background-color: hsla(0, 0%, 100%, 0.4     );
+    background-color: hsla(0, 0%, 100%, 0.4);
     box-shadow: 2px 2px 4px var(--background);
 
     opacity: 0.9;

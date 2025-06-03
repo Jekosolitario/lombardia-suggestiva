@@ -19,6 +19,12 @@
     box-sizing: border-box;
 }
 
+/* link attivo in grassetto, indico all'utente in qauale pagina  si trova */
+nav a.active {
+    font-weight: bold;
+}
+
+
 /* Stile base del messaggio (toast) */
 .toast {
     position: fixed;
@@ -70,7 +76,8 @@ body {
     font-size: 1.7rem;
 
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
     background-color: var(--background);
     cursor: default;
@@ -78,7 +85,7 @@ body {
 
 /* focus-visible per accessibilità da tastiera ai link */
 a:focus-visible {
-    outline: 2px solid var();
+    outline: 2px solid var(--color-link2);
     border-radius: 4px;
 }
 
@@ -168,10 +175,12 @@ main#corpoPagina {
 main#corpoPagina>section#wrapper {
     width: 100%;
     max-height: 80%;
+    max-width: 800px;
+
 
     position: relative;
     padding: 0.5em;
-
+    margin: auto;
 
     display: flex;
     flex-flow: column;
@@ -208,7 +217,38 @@ main#corpoPagina>section#wrapper>section#paragrafoIntroduttivo {
 
 /* rimuovo ombra del modulo */
 main#corpoPagina>section#wrapper>section#modulo {
-    box-shadow: none;
+    #modulo {
+        margin-top: 2rem;
+        padding: 1rem;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: var(--shadow1);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    input,
+    textarea {
+        padding: 1rem;
+        font-size: 1.6rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button#invia {
+        padding: 1rem 2rem;
+        background-color: var(--color-link2);
+        color: white;
+        font-size: 1.6rem;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
 }
 
 /* sezione del form */
@@ -271,8 +311,8 @@ main#corpoPagina>section#wrapper>section#modulo>form#form>fieldset>textarea {
 /* focus quando seleziono gli input e area di testo */
 .input:focus,
 textarea:focus {
-  outline: 2px solid var(--colorH);
-  background-color: white;
+    outline: 2px solid var(--colorH);
+    background-color: white;
 }
 
 

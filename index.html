@@ -28,7 +28,7 @@
 
 <body> <!-- body contenitore grid -->
     <!-- Messaggio in sovrimpressione -->
-    <div id="toast-avviso" class="toast hidden">Sezione non ancora disponibile. Ancora un po di pazienza e ci siamo!
+    <div id="toast-avviso" class="toast hidden" role="alert" aria-live="assertive"><!-- aiuta gli screen reader ad annunciare il messaggio -->Sezione non ancora disponibile. Ancora un po' di pazienza e ci siamo!
     </div>
 
 
@@ -50,7 +50,7 @@
     <!-- MENU  -->
     <nav aria-label="Menu principale" id="menu">
         <ul id="listaMenu">
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html" class="active">HOME</a></li>
             <li><a href="itinerari.html">ITINERARI</a></li>
             <li><a href="contatti.html">CONTATTI</a></li>
         </ul>
